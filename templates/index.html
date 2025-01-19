@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Случайная цитата</title>
+</head>
+<body>
+    <h1>Получить случайную цитату</h1>
+    <form method="post">
+        <button type="submit">Получить цитату</button>
+    </form>
+
+    {% if quote_data %}
+        <div>
+            <blockquote>"{{ quote_data['quote'] }}"</blockquote>
+            <p>- {{ quote_data['author'] }}</p>
+        </div>
+    {% endif %}
+</body>
+</html>
